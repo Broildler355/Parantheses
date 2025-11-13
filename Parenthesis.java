@@ -27,6 +27,7 @@ public class Parenthesis {
                     z = z.substring(1);
                     y = y.substring(0, y.length()-1);
                 }
+                //This ensures that if the pair doesn't exist the code will still work and invalidate it
                 else {
                     a=3;
                 }
@@ -39,6 +40,7 @@ public class Parenthesis {
                     z = z.substring(1);
                     y = y.substring(0, y.length()-1);
                 }
+                //This ensures that if the pair doesn't exist the code will still work and invalidate it
                 else {
                     a=3;
                 }
@@ -51,15 +53,17 @@ public class Parenthesis {
                     z = z.substring(1);
                     y = y.substring(0, y.length()-1);
                 }
-                //This ensures that if the pair isn't 
+                //This ensures that if the pair doesn't exist the code will still work and invalidate it
                 else {
                     a=3;
                 }
             }
+            //This ensures that if we end up on a closing value we can just invalidate it and continue
             else {
                 a = 3;
             }
         }
+        //This checks if we removed all the pairs and if we did it validates it, otherwise it invalidates it
         if (z.length()==0) {
             System.out.println("Valid");
         }
